@@ -15,7 +15,7 @@ public class ExamplePlugin extends Plugin {
     public String example = "example";
 
     public static void main(String[] args) {
-        NDev.init(ExamplePlugin.class, "C:\\Users\\podpage\\nunt");
+        NDev.init(ExamplePlugin.class);
     }
 
     @Override
