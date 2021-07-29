@@ -12,11 +12,10 @@ import io.nunt.core.plugin.annotation.*;
 public class ExamplePlugin extends Plugin {
 
     @PluginConfig(value = PluginConfig.ConfigStore.DATABASE, visibility = PluginConfig.ConfigVisibility.PRIVATE)
-    public static String example = "example";
+    public String example = "example";
 
-    @Override
-    public void load() {
-        Nunt.log(example);
+    public static void main(String[] args) {
+        NDev.init(ExamplePlugin.class, "C:\\Users\\podpage\\nunt");
     }
 
     @Override
@@ -24,8 +23,12 @@ public class ExamplePlugin extends Plugin {
 
     }
 
-    public static void main(String[] args) {
-        NDev.init(ExamplePlugin.class);
+    @Override
+    public void load() {
+        Nunt.log(example);
+
+        ExamplePlugin examplePlugin = getNunt().getInstance(ExamplePlugin.class);
+        Nunt.log(examplePlugin.example);
     }
 
     @Override

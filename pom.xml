@@ -24,7 +24,7 @@
         <dependency>
             <groupId>io.nunt</groupId>
             <artifactId>nuntcore</artifactId>
-            <version>1.1.7-SNAPSHOT</version>
+            <version>1.1.8-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
