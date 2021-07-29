@@ -13,5 +13,7 @@ public class ExampleEndpoint extends PluginHolder implements WebHandler {
     public void handle(WrappedContext wrappedContext) {
         ExampleEvent exampleEvent = new ExampleEvent("example");
         getNunt().getPluginManager().getEventRegistry().callEvent(exampleEvent);
+
+        wrappedContext.success("example");
     }
 }
